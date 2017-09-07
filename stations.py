@@ -39,9 +39,36 @@ def get_prices():
 
     return stations
 
+def closest_station():
+    stations = [{'name': 'SERVICIOS UNIDOS SA',
+                 'prices': {'diesel': '16.06', 'regular': '15.29', 'premium': '17.02'},
+                 'address': 'ALTAMIRA NO. 1201 ORIENTE',
+                 'y': '22.213',
+                 'x': '-97.84769',
+                 'id': '8489',
+                 'distance': 123},
+                {'name': 'SERVICIOS UNIDOS SA',
+                 'prices': {'diesel': '16.06', 'regular': '15.29', 'premium': '17.02'},
+                 'address': 'ALTAMIRA NO. 1201 ORIENTE',
+                 'y': '22.213',
+                 'x': '-97.84769',
+                 'id': '8489',
+                 'distance': 124},
+                 {'name': 'SERVICIOS UNIDOS SA',
+                  'prices': {'diesel': '16.06', 'regular': '15.29', 'premium': '17.02'},
+                  'address': 'ALTAMIRA NO. 1201 ORIENTE',
+                  'y': '22.213',
+                  'x': '-97.84769',
+                  'id': '8489',
+                  'distance': 2},
+               ]
+    print sorted(stations, key=lambda station: station['distance'])
+
+
 def main():
     """Print test."""
     print get_prices()
+    print closest_station()
 
 
 if __name__ == '__main__':
